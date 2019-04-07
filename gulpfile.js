@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const eslint = require('gulp-eslint');
 const stylelint = require('gulp-stylelint');
+const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync');
 
 gulp.task('twig', () => {
@@ -39,6 +40,13 @@ gulp.task('stylelint', () => {
   );
 });
 
+gulp.task('image', () => {
+  return gulp
+    .src('src/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images'));
+});
+
 gulp.task('babel', () => {
   return gulp
     .src('src/js/*.js')
@@ -67,6 +75,6 @@ gulp.task('browsersync', () => {
 
 gulp.task('lint', ['stylelint', 'eslint']);
 gulp.task('build', ['twig', 'sass', 'babel']);
-gulp.task('server', ['browsersync']);
+gulp.task('server', ['browsersync', 'image']);
 
 gulp.task('default', ['lint', 'build']);

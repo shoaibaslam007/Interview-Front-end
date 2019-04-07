@@ -1,12 +1,16 @@
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Axelerant: Interview Frontend</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h3>Welcome</h3>
-    {% include "_button.html.twig" %}
-
-    <script src="main.js"></script>
+{% include "_header.html.twig" %}
+{% include "_map.html.twig" %}
+{% include "_testimonial.html.twig" %}
+{% include "_form.html.twig" %}
+{% include "_footer.html.twig" %}
+<script src="main.js"></script>
 </body>

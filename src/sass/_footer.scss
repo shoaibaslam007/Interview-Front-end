@@ -1,0 +1,32 @@
+footer {
+  background-color: $dark-grey;
+  padding: 35px 0;
+  @media #{$mobile} {
+    text-align: center;
+  }
+  .content-wrap {
+    justify-content: space-between;
+    @media #{$mobile} {
+      display: block;
+    }
+  }
+  .copyright {
+    font-size: 12px;
+    color: $nav-grey;
+    margin: 0;
+  }
+  .list-social {
+    display: flex;
+    line-height: 21px;
+    @media #{$mobile} {
+      justify-content: center;
+      margin-top: 20px;
+    }
+    li {
+      font-size: 12px;
+      color: $nav-grey;
+      list-style-type: none;
+      margin-left: 10px;
+    }
+  }
+}

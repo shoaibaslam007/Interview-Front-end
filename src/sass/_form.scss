@@ -1,0 +1,71 @@
+.form {
+  background: url('../images/form-bg.jpg') no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+  @media #{$mobile} {
+    padding: 80px 15px;
+  }
+  h2 {
+    text-transform: capitalize;
+  }
+  h4 {
+    margin: 0;
+    font-weight: 300;
+  }
+  &__wrap {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    @media #{$tablet} {
+      max-width: 740px;
+    }
+    @media #{$mobile} {
+      max-width: 100%;
+    }
+    form {
+      display: flex;
+      flex-flow: column;
+      margin-top: 30px;
+      .form-group {
+        margin-bottom: 20px;
+        @media #{$mobile} {
+          margin-bottom: 0;
+        }
+        input {
+          max-width: 254px;
+          width: 100%;
+          margin-right: 14px;
+          @media #{$tablet} {
+            max-width: 234px;
+          }
+          &.form-control {
+            height: 38px;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        textarea {
+          &.form-control {
+            width: 100%;
+            resize: none;
+          }
+        }
+        .form-control {
+          background-color: white;
+          border: 1px solid $nav-grey;
+          border-radius: 4px;
+          padding: 6px 12px;
+          font-size: 14px;
+          color: $nav-grey;
+          @media #{$mobile} {
+            max-width: 100%;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

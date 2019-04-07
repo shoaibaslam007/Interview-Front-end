@@ -1,4 +1,13 @@
 @import 'config/**/*.scss';
+@import 'base.scss';
+@import 'button.scss';
+@import 'navigation.scss';
+@import 'banner-detail.scss';
+@import 'header.scss';
+@import 'map.scss';
+@import 'testimonial.scss';
+@import 'form.scss';
+@import 'footer.scss';
 
 html {
   height: 100%;
@@ -7,5 +16,7 @@ html {
 
 body {
   font-size: 100%;
-  display: flex;
+  font-family: 'Roboto', sans-serif;
+  color: $body-grey;
+  line-height: 1;
 }
